@@ -1,0 +1,1 @@
+# -BidMachine-Android-admanager-adapter
