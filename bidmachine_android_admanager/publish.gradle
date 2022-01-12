@@ -1,0 +1,56 @@
+/**
+ * Gradle task for submit aar build to publish repo.
+ * Required params:
+ * repo - target publish repository
+ * user_name - user name for authorization
+ * user_password - user password for authorization
+ */
+
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+
+def libGroupId = "io.bidmachine"
+def libArtifactId = "ads.adapters.admanager"
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId = libGroupId
+            artifactId = libArtifactId
+            version = android.defaultConfig.versionName
+            artifact "${project.buildDir}/outputs/aar/${project.name}-release.aar"
+        }
+    }
+}
+
+artifactory {
+    contextUrl = 'https://artifactory.bidmachine.io/artifactory'
+    publish {
+        repository {
+            if (project.hasProperty("repo")) {
+                repoKey = repo
+                println "Artifactory repo: $repo"
+            } else {
+                println "Artifactory repo not provided (-Prepo)"
+            }
+            if (project.hasProperty("user_name")) {
+                username = user_name
+                println "Artifactory username: $user_name"
+            } else {
+                println "Artifactory username not provided! (-Puser_name)"
+            }
+            if (project.hasProperty("user_password")) {
+                password = user_password
+                println "Artifactory password: $user_password"
+            } else {
+                println "Artifactory password not provided! (-Puser_password)"
+            }
+        }
+        defaults {
+            publications('aar')
+        }
+    }
+}
+
+task uploadAarToArtifactory(dependsOn: [assemble, artifactoryPublish], group: 'aar')
+artifactoryPublish.mustRunAfter(assemble)

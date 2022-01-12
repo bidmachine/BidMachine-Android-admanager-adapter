@@ -1,0 +1,3 @@
+include ':bidmachine_android_admanager',
+        ':example_pre_bid',
+        ':example_pre_bid_wrapper'
