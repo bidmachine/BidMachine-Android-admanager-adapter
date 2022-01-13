@@ -44,8 +44,6 @@ dependencies {
 ## Working with price rounding
 BidMachine supports server-side price rounding.<br>
 To setup it correctly - please contact your manager to set up your own rounding rules. Manager will provide you with the list of prices and you can use them to create orders/line items in partner's dashboard.<br>
-If you prefer to automate this process - you can use PubMonkey plugin.<br>
-Documentation about how to use plugin could be found [here](https://doc.bidmachine.io/eng/ssp-publisher-integration-documentation/bidmachine-custom-adapters/how-to-use-plugin-for-integration-via-mopub-google/creating-line-items-in-google-ad-manager-dashboard)
 
 ## What's new in last version
 Please view the [changelog](CHANGELOG.md) for details.
