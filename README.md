@@ -1,4 +1,4 @@
-# BidMachine-Android-admanager-adapter
+# BidMachine Android AdManager Adapter
 
 [<img src="https://img.shields.io/badge/SDK%20Version-1.8.3-brightgreen">](https://github.com/bidmachine/BidMachine-Android-SDK)
 [<img src="https://img.shields.io/badge/Adapter%20Version-1.8.3.1-green">](https://artifactory.bidmachine.io/bidmachine/io/bidmachine/ads.adapters.admanager/1.8.3.1/)
