@@ -16,7 +16,7 @@ import io.bidmachine.AdRequest;
 public abstract class AMBidMachineAd<
         SelfType extends AMBidMachineAd<SelfType, Listener, BidMachineAdRequest>,
         Listener extends AMBidMachineListener<SelfType>,
-        BidMachineAdRequest extends AdRequest<BidMachineAdRequest, ?>> {
+        BidMachineAdRequest extends AdRequest<BidMachineAdRequest, ?, ?>> {
 
     private static final long ON_APP_EVENT_WAIT_DEFAULT = 200;
 

@@ -30,7 +30,7 @@ public class AMBidMachineUtils {
      * @return {@link AdManagerAdRequest} ready to loading
      */
     @NonNull
-    public static AdManagerAdRequest createAdManagerRequest(@NonNull io.bidmachine.AdRequest<?, ?> adRequest) {
+    public static AdManagerAdRequest createAdManagerRequest(@NonNull io.bidmachine.AdRequest<?, ?, ?> adRequest) {
         return createAdManagerRequestBuilder(adRequest).build();
     }
 
@@ -41,7 +41,7 @@ public class AMBidMachineUtils {
      * @return {@link AdManagerAdRequest.Builder} ready to building and loading
      */
     @NonNull
-    public static AdManagerAdRequest.Builder createAdManagerRequestBuilder(@NonNull io.bidmachine.AdRequest<?, ?> adRequest) {
+    public static AdManagerAdRequest.Builder createAdManagerRequestBuilder(@NonNull io.bidmachine.AdRequest<?, ?, ?> adRequest) {
         AdManagerAdRequest.Builder adRequestBuilder = new AdManagerAdRequest.Builder();
         appendRequest(adRequestBuilder, adRequest);
         return adRequestBuilder;
@@ -54,7 +54,7 @@ public class AMBidMachineUtils {
      * @param adRequest - loaded {@link io.bidmachine.AdRequest}
      */
     public static void appendRequest(@NonNull AdManagerAdRequest.Builder builder,
-                                     @NonNull io.bidmachine.AdRequest<?, ?> adRequest) {
+                                     @NonNull io.bidmachine.AdRequest<?, ?, ?> adRequest) {
         appendCustomTargeting(builder, adRequest);
     }
 
@@ -66,7 +66,7 @@ public class AMBidMachineUtils {
      * @param adRequest - loaded {@link io.bidmachine.AdRequest}
      */
     public static void appendCustomTargeting(@NonNull AdManagerAdRequest.Builder builder,
-                                             @NonNull io.bidmachine.AdRequest<?, ?> adRequest) {
+                                             @NonNull io.bidmachine.AdRequest<?, ?, ?> adRequest) {
         appendCustomTargeting(builder, BidMachineFetcher.toMap(adRequest));
     }
 

@@ -1,7 +1,7 @@
 # BidMachine Android AdManager Adapter
 
-[<img src="https://img.shields.io/badge/SDK%20Version-1.8.3-brightgreen">](https://github.com/bidmachine/BidMachine-Android-SDK)
-[<img src="https://img.shields.io/badge/Adapter%20Version-1.8.3.1-green">](https://artifactory.bidmachine.io/bidmachine/io/bidmachine/ads.adapters.admanager/1.8.3.1/)
+[<img src="https://img.shields.io/badge/SDK%20Version-1.9.0-brightgreen">](https://github.com/bidmachine/BidMachine-Android-SDK)
+[<img src="https://img.shields.io/badge/Adapter%20Version-1.9.0.2-green">](https://artifactory.bidmachine.io/bidmachine/io/bidmachine/ads.adapters.admanager/1.9.0.2/)
 [<img src="https://img.shields.io/badge/AdManager%20Version-20.5.0-blue">](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start)
 
 * [Useful links](#useful-links)
@@ -27,9 +27,9 @@ repositories {
 
 dependencies {
     // Add BidMachine SDK dependency
-    implementation 'io.bidmachine:ads:1.8.3'
+    implementation 'io.bidmachine:ads:1.9.0'
     // Add BidMachine SDK AdManager Adapter dependency
-    implementation 'io.bidmachine:ads.adapters.admanager:1.8.3.1'
+    implementation 'io.bidmachine:ads.adapters.admanager:1.9.0.2'
     // Add AdManager SDK dependency
     implementation 'com.google.android.gms:play-services-ads:20.5.0'
 }
