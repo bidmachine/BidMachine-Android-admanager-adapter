@@ -1,3 +1,7 @@
+## Version 1.9.3.5 (March 31, 2022)
+**Features**:
+* Updated BidMachine version to 1.9.3
+
 ## Version 1.9.2.4 (March 16, 2022)
 **Features**:
 * Updated BidMachine version to 1.9.2
