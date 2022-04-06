@@ -158,13 +158,15 @@ public class MainActivity extends AppCompatActivity {
             AMBidMachineUtils.appendRequest(adRequestBuilder, bannerRequest);
         }
 
+        BannerListener bannerListener = new BannerListener();
+
         // Create new AdView instance and load it
         adManagerBannerAdView = new AdManagerAdView(this);
         adManagerBannerAdView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                                                                          ViewGroup.LayoutParams.MATCH_PARENT));
         adManagerBannerAdView.setAdUnitId(BANNER_ID);
-        adManagerBannerAdView.setAdListener(new BannerListener());
-        adManagerBannerAdView.setAppEventListener(new BannerListener());
+        adManagerBannerAdView.setAdListener(bannerListener);
+        adManagerBannerAdView.setAppEventListener(bannerListener);
         adManagerBannerAdView.setAdSize(AdSize.BANNER);
         adManagerBannerAdView.loadAd(adRequestBuilder.build());
     }
@@ -281,14 +283,16 @@ public class MainActivity extends AppCompatActivity {
             AMBidMachineUtils.appendRequest(adRequestBuilder, mrecRequest);
         }
 
+        MrecListener mrecListener = new MrecListener();
+
         // Create new AdView instance and load it
         adManagerMrecAdView = new AdManagerAdView(this);
         adManagerMrecAdView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                                                                        ViewGroup.LayoutParams.MATCH_PARENT));
         adManagerMrecAdView.setAdUnitId(MREC_ID);
         adManagerMrecAdView.setAdSize(AdSize.MEDIUM_RECTANGLE);
-        adManagerMrecAdView.setAdListener(new MrecListener());
-        adManagerMrecAdView.setAppEventListener(new MrecListener());
+        adManagerMrecAdView.setAdListener(mrecListener);
+        adManagerMrecAdView.setAppEventListener(mrecListener);
         adManagerMrecAdView.loadAd(adRequestBuilder.build());
     }
 
