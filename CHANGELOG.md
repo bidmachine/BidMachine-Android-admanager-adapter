@@ -1,3 +1,8 @@
+## Version 1.9.4.6 (May 30, 2022)
+**Features**:
+* Updated BidMachine version to 1.9.4
+* Updated AdManager version to 21.0.0
+
 ## Version 1.9.3.5 (March 31, 2022)
 **Features**:
 * Updated BidMachine version to 1.9.3

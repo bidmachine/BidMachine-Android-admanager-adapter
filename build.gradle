@@ -1,8 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.admanager_adapter_version_code = 5
-    ext.admanager_version = "20.6.0"
-    ext.bidmachine_version = "1.9.3"
+    ext.admanager_adapter_version_code = 6
+    ext.admanager_version = "21.0.0"
+    ext.bidmachine_version = "1.9.4"
     ext.admanager_adapter_version = "$bidmachine_version.$admanager_adapter_version_code"
     ext.bidmachine_adcolony_version = "$bidmachine_version.10"
     ext.bidmachine_amazon_version = "$bidmachine_version.6"
